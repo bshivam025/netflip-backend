@@ -4,7 +4,9 @@ import fetch from "node-fetch";
 async function getNowPlaying (req, res, next) {
     try{
         let result = await fetch(TMDB_APIS.get_now_playing_movies, API_OPTIONS_TMDB);
+        console.log("we are here");
         result = await result.json();
+        console.log('result : ' + result);
         res.json({
             success: true,
             data: result
