@@ -16,6 +16,6 @@ app.get("/", (req, res) => {
   res.send("Hello from Netflix GPT Backend!");
 });
 
-app.use("/api/movies", movieRoutes);
+app.use("/backend/movies", movieRoutes);
 
 export default app;
