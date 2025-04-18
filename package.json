@@ -1,7 +1,7 @@
 {
   "name": "netflip-backend",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "api/index.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
@@ -20,5 +20,5 @@
     "nodemon": "^3.1.9",
     "serverless-http": "^3.2.0"
   },
-  "type": "module"  
+  "type": "module"
 }
