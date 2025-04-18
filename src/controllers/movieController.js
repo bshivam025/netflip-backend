@@ -1,4 +1,5 @@
 const {API_OPTIONS_TMDB, TMDB_APIS} = require("../utils/constant");
+const fetch = require("node-fetch");
 
 
 async function getNowPlaying (req, res, next) {
