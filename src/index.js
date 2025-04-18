@@ -23,9 +23,9 @@ app.use("/api/movies", movieRoutes);
 
 export default app;
 
-if (import.meta.url === import.meta.resolve(".")) {
-  const PORT = process.env.PORT || 5000;
-  app.listen(PORT, () => {
-    console.log("Abhi hum zinda hain is port pe:", PORT);
-  });
-}
+// if (import.meta.url === import.meta.resolve(".")) {
+//   const PORT = process.env.PORT || 5000;
+//   app.listen(PORT, () => {
+//     console.log("Abhi hum zinda hain is port pe:", PORT);
+//   });
+// }
