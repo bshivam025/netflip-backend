@@ -1,7 +1,7 @@
-const express = require("express");
-const dotenv = require("dotenv");
-const morgan = require("morgan");
-const cors = require("cors");
+import express from "express";
+import dotenv from "dotenv";
+import morgan from "morgan";
+import cors from "cors";
 
 dotenv.config(); // .env file load karna
 
@@ -17,13 +17,13 @@ app.get("/", (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
-const movieRoutes = require("./routes/movies");
+import movieRoutes from "./routes/movies.js";
 
 app.use("/api/movies", movieRoutes);
 
-module.exports = app;
+export default app;
 
-if (require.main === module) {
+if (import.meta.url === import.meta.resolve(".")) {
   const PORT = process.env.PORT || 5000;
   app.listen(PORT, () => {
     console.log("Abhi hum zinda hain is port pe:", PORT);

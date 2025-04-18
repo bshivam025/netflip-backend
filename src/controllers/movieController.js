@@ -1,4 +1,4 @@
-const {API_OPTIONS_TMDB, TMDB_APIS} = require("../utils/constant");
+import { API_OPTIONS_TMDB, TMDB_APIS } from "../utils/constant.js";
 import fetch from "node-fetch";
 
 async function getNowPlaying (req, res, next) {
@@ -52,8 +52,4 @@ async function getTopRated (req, res, next) {
     }
 }
 
-module.exports = {
-    getNowPlaying,
-    getPopular,
-    getTopRated
-}
+export { getNowPlaying, getPopular, getTopRated };

@@ -1,13 +1,9 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const {
-    getNowPlaying,
-    getPopular,
-    getTopRated
-} = require("../controllers/movieController")
+import { getNowPlaying, getPopular, getTopRated } from "../controllers/movieController.js";
 
-router.get("/now-playing", getNowPlaying)
-router.get("/popular", getPopular)
-router.get("/top-rated", getTopRated)
+router.get("/now-playing", getNowPlaying);
+router.get("/popular", getPopular);
+router.get("/top-rated", getTopRated);
 
-module.exports = router;
+export default router;

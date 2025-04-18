@@ -19,8 +19,4 @@ const TMDB_APIS = {
 };
 
 
-
-module.exports = {
-    API_OPTIONS_TMDB,
-    TMDB_APIS
-}
+export { API_OPTIONS_TMDB, TMDB_APIS };
