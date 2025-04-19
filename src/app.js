@@ -16,6 +16,10 @@ app.get("/", (req, res) => {
   res.send("Hello from Netflix GPT Backend!");
 });
 
-app.use("/backend/movies", movieRoutes);
+app.use("/api/movies", movieRoutes);
 
-export default app;
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, ()=>{
+  console.log("abhi hum zinda hai PORT : ", PORT);
+})
+

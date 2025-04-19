@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "rewrites": [
-    {
-      "source": "/backend/:path*",
-      "destination": "/api/index.js"
-    }
-  ]
+  "builds": [{"src": "src/app.js", "use": "@vercel/node"}],
+  "routes": [{
+    "src": "/(.*)",
+    "dest": "src/app.js"
+  }]
+
 }
