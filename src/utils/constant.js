@@ -6,7 +6,7 @@ export const getApiOptionsTmdb = () => ({
   },
 });
 
-const TMDB_APIS = {
+export const TMDB_APIS = {
   get_now_playing_movies:
     "https://api.themoviedb.org/3/movie/now_playing?page=1",
   get_movie_video: "https://api.themoviedb.org/3/movie/{MOVIE_ID}/videos?",
@@ -18,5 +18,5 @@ const TMDB_APIS = {
     "https://api.themoviedb.org/3/movie/{MOVIE_ID}/similar?language=en-US&page=1",
 };
 
-
-export { TMDB_APIS };
+export const TMDB_READ_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4N2VhNjMzMzI4OWY4N2U3OWFmNmZmOGZjNTZhZDQzZSIsIm5iZiI6MTc0MDQ4NTM3NC4wNTksInN1YiI6IjY3YmRiMmZlZWY0YWUyOWRmYjJkYjZmNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7YguNdhAmbEXWPbwLbUomQFy_clh7YcB-IeeKe1gS3E";
+export const TMDB_API_KEY = "87ea6333289f87e79af6ff8fc56ad43e";
