@@ -1,9 +1,9 @@
-import { API_OPTIONS_TMDB, TMDB_APIS } from "../utils/constant.js";
+import { getApiOptionsTmdb, TMDB_APIS } from "../utils/constant.js";
 import fetch from "node-fetch";
 
 async function getNowPlaying (req, res, next) {
     try{
-        let result = await fetch(TMDB_APIS.get_now_playing_movies, API_OPTIONS_TMDB);
+        let result = await fetch(TMDB_APIS.get_now_playing_movies, getApiOptionsTmdb());
         result = await result.json();
         res.json({
             success: true,
@@ -20,7 +20,7 @@ async function getNowPlaying (req, res, next) {
 
 async function getPopular (req, res, next) {
     try{
-        let result = await fetch(TMDB_APIS.get_popular_movies, API_OPTIONS_TMDB);
+        let result = await fetch(TMDB_APIS.get_popular_movies, getApiOptionsTmdb());
         result = await result.json();
         res.json({
             success: true,
@@ -37,7 +37,7 @@ async function getPopular (req, res, next) {
 
 async function getTopRated (req, res, next) {
     try{
-        let result = await fetch(TMDB_APIS.get_top_rated_movies, API_OPTIONS_TMDB);
+        let result = await fetch(TMDB_APIS.get_top_rated_movies, getApiOptionsTmdb());
         result = await result.json();
         res.json({
             success: true,

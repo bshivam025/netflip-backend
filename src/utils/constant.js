@@ -1,10 +1,10 @@
-const API_OPTIONS_TMDB = {
+export const getApiOptionsTmdb = () => ({
   method: "GET",
   headers: {
     accept: "application/json",
     Authorization: process.env.TMDB_AUTH,
   },
-};
+});
 
 const TMDB_APIS = {
   get_now_playing_movies:
@@ -19,4 +19,4 @@ const TMDB_APIS = {
 };
 
 
-export { API_OPTIONS_TMDB, TMDB_APIS };
+export { TMDB_APIS };
