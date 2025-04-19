@@ -3,22 +3,12 @@ import fetch from "node-fetch";
 
 async function getNowPlaying (req, res, next) {
     try{
-
-        console.log("WE WON00");
-console.error("WE WON");
-        return res.json({
+        let result = await fetch(TMDB_APIS.get_now_playing_movies, API_OPTIONS_TMDB);
+        result = await result.json();
+        res.json({
             success: true,
-            message: "Yes! Controller reached ✅"
+            data: result
         });
-
-        // let result = await fetch(TMDB_APIS.get_now_playing_movies, API_OPTIONS_TMDB);
-        // console.log("we are here");
-        // result = await result.json();
-        // console.log('result : ' + result);
-        // res.json({
-        //     success: true,
-        //     data: result
-        // });
     } catch(error) {
         console.error("error in fetching now playing movies : ", error);
         res.json({
