@@ -8,5 +8,6 @@ router.get("/top-rated", getTopRated);
 router.get("/fetch-movie-by-id/:id", getMovieById);
 router.get("/fetch-movie-by-search/:name", getMovieBySearch);
 router.get("/fetch-similar-movie/:id", getSimilarMovie);
+router.get("/fetch-movie-video/:id", getMovieVideo);
 
 export default router;
